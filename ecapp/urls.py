@@ -26,4 +26,4 @@ urlpatterns = [
 
 admin.site.site_header = "Chandni Chowk"
 admin.site.site_title = "Chandni Chowk"
-admin.site.index_title = "Chandni Chowk"
+admin.site.index_title = "Chandni Chowk Elections"

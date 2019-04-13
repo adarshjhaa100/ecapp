@@ -25,8 +25,7 @@ SECRET_KEY = '!!+6c#dp&16s@rtg-tzonp1%)pb#lp*f08nq9jr3!440$e10xc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [u'error.serveo.net']
 
 # Application definition
 
