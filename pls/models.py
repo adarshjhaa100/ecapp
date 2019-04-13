@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-import 
+
 
 def user_path(instance,filename):
 	return 'Picture Of_{0}/{1}'.format(instance, filename)
