@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-import 
+
 
 def user_path(instance,filename):
 	return 'Picture Of_{0}/{1}'.format(instance, filename)
@@ -20,7 +20,7 @@ class facility(models.Model):
 		
 class pollingStation(models.Model):
 	pid=models.CharField(max_length=100)
-	password=models.CharField(max_length=100)
+	password=models.CharField(max_length=100,default='')
 	lat=models.FloatField(default=0)
 	lon=models.FloatField(default=0)
 	address=models.CharField(max_length=500,default='')
@@ -52,7 +52,7 @@ class pwd(models.Model):
 
 class ThirdGender(models.Model):
 	class Meta:
-		verbose_name_plural="(special voters) +66Third Genders"
+		verbose_name_plural="(special voters) Third Genders"
 	epic=models.CharField(max_length=10)
 	phone=models.BigIntegerField(default=0)
 	pickupLat=models.FloatField(default=0)

@@ -52,9 +52,9 @@ def ViewAllCandidate(request):
 		party_str=str(base64.b64encode(candidate.symbol.read()).decode('utf-8'))
 		data={}
 		data['name']=candidate.name
-		data['photo']=photo_str
+		data['photo']=candidate.photo.url
 		data['party']=candidate.party
-		data['symbol']=party_str
+		data['symbol']=candidate.symbol.url
 		data['affitavit']=candidate.affitavid
 		a.append(data)
 	return JsonResponse(a,safe=False)		
@@ -65,9 +65,9 @@ def getCandidate(request):
 	party_str=str(base64.b64encode(candidate.symbol.read()).decode('utf-8'))
 	data={}
 	data['name']=candidate.name
-	data['photo']=photo_str
+	data['photo']=candidate.photo.url
 	data['party']=candidate.party
-	data['symbol']=party_str
+	data['symbol']=candidate.symbol.url
 	data['affitavit']=candidate.affitavid	
 	return JsonResponse(data,safe=False)
 
